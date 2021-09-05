@@ -10,15 +10,15 @@ body{
     min-height: 100vh;
 }
 .container{
-    column-count: 3;
-    max-width:768px;
+    column-count: 4;
+    max-width:1200px;
     margin: auto;
 }
 .box{
     display: inline-block;
 }
 .box{
-    width: 250px;
+    width: 300px;
     height: 300px;
   
     overflow: hidden;
@@ -32,15 +32,31 @@ body{
 .box:hover img{
     transform: scale(1.1);
 }
+
+@media (max-width:992px) {
+    .box{
+        display: block;
+        margin-bottom: 1px;
+    }
+    .container{
+        column-count: 3;
+    }
+}
+@media (max-width:768px) {
+    .box{
+        display: block;
+        margin-bottom: 1px;
+    }
+    .container{
+        column-count: 2;
+    }
+}
 @media (max-width:576px) {
     .box{
         display: block;
+        margin-bottom: 1px;
     }
     .container{
         column-count: 1;
-    }
-    .box{
-        display: inline-block;
-        margin-bottom: 1px;
     }
 }
